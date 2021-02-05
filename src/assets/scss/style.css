@@ -1,0 +1,20 @@
+/*  Global  */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* Colors */
+#app {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  font-family: 'Times New Roman', sans-serif;
+}
+/*# sourceMappingURL=style.css.map */

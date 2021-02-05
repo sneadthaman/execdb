@@ -1,0 +1,157 @@
+/*  Global  */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Roboto+Slab:wght@300&display=swap');
+
+$boldsans: 'Noto Sans', sans-serif;
+$ltroboto: 'Roboto Slab', serif;
+
+/* Colors */
+$gray: #C9CAD9;
+$black: #04080F;
+$dk-blue: #576490;
+$lt-blue: #A3BCF9;
+
+$danger: #FE5F55;
+$primary: #725AC1;
+$success: #6DA34D;
+
+/* Additional Variable */
+$mymargin: 1.25rem;
+$mypadding: .75rem;
+$myshadow: 10px 1px 5px 1px $gray;
+$myradius: 5px;
+
+body {
+    font-family:'Lucida Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    grid-template-rows: 1fr 11fr;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: $primary;
+}
+
+/* Side Nav */
+
+#logo {
+    margin: 1rem ($mymargin * 2);
+}
+
+#menu > * {
+    padding: $mypadding;
+}
+
+.menu-items li {
+    padding: $mypadding;
+}
+
+.menu-header {
+    border-bottom: thin solid $gray;
+    padding: $mypadding;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navigation {
+    background-color: $black;
+    color: $gray;
+    grid-column: 1 / 2;
+    grid-row: 1 / 12;
+    min-height: 100vh;
+}
+
+.navigation a {
+    color: $gray;
+    text-decoration: none;
+    padding: .5rem;
+}
+
+.menu-items a:hover {
+    background-color: $gray;
+    color: $black;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Top Header */
+
+.header {
+    grid-column: 2;
+    grid-row: 1 / 2;
+    box-shadow: $myshadow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 7rem;
+}
+
+.header-icons a:visited {
+    color: $gray;
+}
+
+#need-help {
+    margin-left: 1rem;
+    font-family: $ltroboto;
+}
+
+#chat-btn {
+    margin: 0 1.25rem;
+    text-transform: uppercase;
+    font-family: $boldsans;
+    letter-spacing: 1px;
+}
+
+.search-box {
+    border-radius: $myradius;
+    height: 2rem;
+    width: 20rem;
+}
+
+
+/* Tile Container */ 
+
+.tile-container {
+    grid-column: 2;
+    grid-row: 2 / 12;
+    background-color: desaturate($color: $gray, $amount: 20%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile {
+    background-color: white;
+    width: 20rem;
+    height: 20rem;
+    margin: 1rem;
+    filter: drop-shadow(0 0 0.75rem $gray);
+    border-radius: $myradius;
+}
